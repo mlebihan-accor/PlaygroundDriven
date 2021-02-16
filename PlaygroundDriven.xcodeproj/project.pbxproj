@@ -20,6 +20,7 @@
 		1B21059525D8217F0059FB8B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21059225D8217F0059FB8B /* UIColor+Extension.swift */; };
 		1B21059625D8217F0059FB8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B21059325D8217F0059FB8B /* Main.storyboard */; };
 		1B21059A25D823950059FB8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B21059925D823950059FB8B /* Assets.xcassets */; };
+		1B8567A125DC1D1D0036244A /* CompositionField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8567A025DC1D1D0036244A /* CompositionField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		1B21059225D8217F0059FB8B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1B21059325D8217F0059FB8B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1B21059925D823950059FB8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B8567A025DC1D1D0036244A /* CompositionField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				1B21059325D8217F0059FB8B /* Main.storyboard */,
 				1B21059225D8217F0059FB8B /* UIColor+Extension.swift */,
 				1B21059125D8217F0059FB8B /* ViewController.swift */,
+				1B8567A025DC1D1D0036244A /* CompositionField.swift */,
 				1B21058525D820C90059FB8B /* CompositionField.h */,
 				1B21058625D820C90059FB8B /* Info.plist */,
 			);
@@ -257,6 +260,7 @@
 			files = (
 				1B21059425D8217F0059FB8B /* ViewController.swift in Sources */,
 				1B21059525D8217F0059FB8B /* UIColor+Extension.swift in Sources */,
+				1B8567A125DC1D1D0036244A /* CompositionField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
