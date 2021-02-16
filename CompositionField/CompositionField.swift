@@ -32,10 +32,12 @@ public class CompositionField: UIView {
     )
 
     //  MARK: - label and textField stack view
+
     let titleAndInteractiveFieldStackView = UIStackView()
     titleAndInteractiveFieldStackView.translatesAutoresizingMaskIntoConstraints = false
-    titleAndInteractiveFieldStackView.axis = .horizontal // change axis with available space
-    titleAndInteractiveFieldStackView.distribution = .fill
+    // get UIapplication.shared.UIContentSizeCategory to set `titleAndInteractiveFieldStackView.axis`
+    titleAndInteractiveFieldStackView.axis = .horizontal
+    titleAndInteractiveFieldStackView.alignment = titleAndInteractiveFieldStackView.axis == .vertical ? .top : .fill
     titleAndInteractiveFieldStackView.backgroundColor = .clear
     titleAndInteractiveFieldStackView.spacing = 8
 
@@ -53,7 +55,8 @@ public class CompositionField: UIView {
       : .preferredFont(forTextStyle: .footnote, compatibleWith: self.traitCollection)
     titleLabel.textAlignment = .natural
     titleAndInteractiveFieldStackView.addArrangedSubview(titleLabel)
-    titleLabel.widthAnchor.constraint(equalTo: titleAndInteractiveFieldStackView.widthAnchor, multiplier: 0.3).isActive = true
+    let multiplier: CGFloat = titleAndInteractiveFieldStackView.axis == .vertical ? 1.0 : 0.3
+    titleLabel.widthAnchor.constraint(equalTo: titleAndInteractiveFieldStackView.widthAnchor, multiplier: multiplier).isActive = true
 
     //  MARK: - interactive field
 
