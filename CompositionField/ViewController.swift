@@ -28,6 +28,6 @@ public class ViewController: UIViewController {
 
     self.mainStackView.addArrangedSubview(CompositionField(label: "Code Postal", isOnError: false))
     self.mainStackView.addArrangedSubview(CompositionField(label: "Nom", isOnError: true))
-    self.mainStackView.addArrangedSubview(CompositionField(label: "Anouvong Anouvong Anouvong", isOnError: true))
+    self.mainStackView.addArrangedSubview(CompositionField(label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", isOnError: true))
   }
 }

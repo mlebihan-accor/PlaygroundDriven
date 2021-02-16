@@ -44,7 +44,7 @@ public class CompositionField: UIView {
     //  MARK: - titleLabel
 
     let titleLabel = UILabel()
-    titleLabel.numberOfLines = 0
+    titleLabel.numberOfLines = 2
     titleLabel.translatesAutoresizingMaskIntoConstraints = false
     titleLabel.text = label
     titleLabel.textColor = .textBody
@@ -74,7 +74,7 @@ public class CompositionField: UIView {
       let iconAndMessageStackView = UIStackView()
       iconAndMessageStackView.translatesAutoresizingMaskIntoConstraints = false
       iconAndMessageStackView.axis = .horizontal
-      iconAndMessageStackView.distribution = .fillProportionally
+      iconAndMessageStackView.spacing = 6
 
       stackContainer.addArrangedSubview(iconAndMessageStackView)
 
@@ -91,23 +91,18 @@ public class CompositionField: UIView {
 
       //  MARK: - icon
 
-      //    let icon = UIImage(named: "Warn")
-      //    let iconImageView = UIImageView()
-      //    iconImageView.translatesAutoresizingMaskIntoConstraints = false
-      //    iconImageView.image = icon
-      //    iconImageView.adjustsImageSizeForAccessibilityContentSizeCategory = true
-      //    iconImageView.setContentHuggingPriority(.defaultLow + 1, for: .horizontal)
-      //    iconImageView.setContentCompressionResistancePriority(.defaultLow + 1, for: .horizontal)
-      //
-      //    iconAndMessageStackView.addArrangedSubview(iconImageView)
+      let bundle = Bundle(for: CompositionField.self)
+      let icon = UIImage(named: "Warn", in: bundle, compatibleWith: nil)
+      let iconImageView = UIImageView()
+      iconImageView.translatesAutoresizingMaskIntoConstraints = false
+      iconImageView.image = icon
+      iconImageView.adjustsImageSizeForAccessibilityContentSizeCategory = true
+      iconImageView.setContentHuggingPriority(.defaultLow + 1, for: .horizontal)
+
+      iconAndMessageStackView.addArrangedSubview(iconImageView)
       iconAndMessageStackView.addArrangedSubview(messageLabel)
-      //
-      //    NSLayoutConstraint.activate(
-      //      [iconImageView.centerYAnchor.constraint(equalTo: messageLabel.centerYAnchor),
-      //       iconImageView.heightAnchor.constraint(equalTo: messageLabel.heightAnchor),
-      //       iconImageView.heightAnchor.constraint(equalTo: iconImageView.widthAnchor)
-      //      ]
-      //    )
+
+      iconImageView.widthAnchor.constraint(equalTo: iconImageView.heightAnchor).isActive = true
     }
   }
 }
