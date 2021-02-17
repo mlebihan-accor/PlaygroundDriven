@@ -37,9 +37,9 @@ public class CompositionField: UIView {
     titleAndInteractiveFieldStackView.translatesAutoresizingMaskIntoConstraints = false
     // get UIapplication.shared.UIContentSizeCategory to set `titleAndInteractiveFieldStackView.axis`
     titleAndInteractiveFieldStackView.axis = .horizontal
-    titleAndInteractiveFieldStackView.alignment = titleAndInteractiveFieldStackView.axis == .vertical ? .top : .fill
+    titleAndInteractiveFieldStackView.alignment = titleAndInteractiveFieldStackView.axis == .vertical ? .leading : .fill
     titleAndInteractiveFieldStackView.backgroundColor = .clear
-    titleAndInteractiveFieldStackView.spacing = 8
+    titleAndInteractiveFieldStackView.spacing = titleAndInteractiveFieldStackView.axis == .vertical ? 2 : 8
 
     stackContainer.addArrangedSubview(titleAndInteractiveFieldStackView)
 
@@ -51,8 +51,8 @@ public class CompositionField: UIView {
     titleLabel.text = label
     titleLabel.textColor = .textBody
     titleLabel.font = self.traitCollection.verticalSizeClass == .regular && self.traitCollection.horizontalSizeClass == .regular
-      ? .preferredFont(forTextStyle: .footnote, compatibleWith: self.traitCollection)
-      : .preferredFont(forTextStyle: .footnote, compatibleWith: self.traitCollection)
+      ? .preferredFont(forTextStyle: .body, compatibleWith: self.traitCollection)
+      : .preferredFont(forTextStyle: .body, compatibleWith: self.traitCollection)
     titleLabel.textAlignment = .natural
     titleAndInteractiveFieldStackView.addArrangedSubview(titleLabel)
     let multiplier: CGFloat = titleAndInteractiveFieldStackView.axis == .vertical ? 1.0 : 0.3
@@ -65,8 +65,8 @@ public class CompositionField: UIView {
     interactiveTextField.text = "Required"
     interactiveTextField.textColor = .textMuted
     interactiveTextField.font = self.traitCollection.verticalSizeClass == .regular && self.traitCollection.horizontalSizeClass == .regular
-      ? .preferredFont(forTextStyle: .footnote, compatibleWith: self.traitCollection)
-      : .preferredFont(forTextStyle: .footnote, compatibleWith: self.traitCollection)
+      ? .preferredFont(forTextStyle: .body, compatibleWith: self.traitCollection)
+      : .preferredFont(forTextStyle: .body, compatibleWith: self.traitCollection)
     interactiveTextField.textAlignment = .natural
     titleAndInteractiveFieldStackView.addArrangedSubview(interactiveTextField)
 

@@ -19,15 +19,14 @@ public class ViewController: UIViewController {
     // MARK: - set up main stack view
     self.mainStackView.axis = .vertical
     self.mainStackView.translatesAutoresizingMaskIntoConstraints = false
-    self.mainStackView.spacing = 8
+    self.mainStackView.spacing = 16
     self.mainStackView.layoutMargins = self.traitCollection.horizontalSizeClass == .regular
-      // TODO: move padding to playground helper
       ? .init(top: 36, left: 36, bottom: 36, right: 36)
       : .init(top: 16, left: 16, bottom: 16, right: 16)
     self.mainStackView.isLayoutMarginsRelativeArrangement = true
 
     self.mainStackView.addArrangedSubview(CompositionField(label: "Code Postal", isOnError: false))
     self.mainStackView.addArrangedSubview(CompositionField(label: "Nom", isOnError: true))
-    self.mainStackView.addArrangedSubview(CompositionField(label: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", isOnError: true))
+    self.mainStackView.addArrangedSubview(CompositionField(label: "Prenom", isOnError: true))
   }
 }
