@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class ViewController: UIViewController {
+public class CompositionFieldViewController: UIViewController {
   
   @IBOutlet weak var mainStackView: UIStackView!
   
@@ -25,8 +25,8 @@ public class ViewController: UIViewController {
       : .init(top: 16, left: 16, bottom: 16, right: 16)
     self.mainStackView.isLayoutMarginsRelativeArrangement = true
 
-    self.mainStackView.addArrangedSubview(CompositionField(label: "Code Postal", isOnError: false))
-    self.mainStackView.addArrangedSubview(CompositionField(label: "Nom", isOnError: true))
-    self.mainStackView.addArrangedSubview(CompositionField(label: "Prenom", isOnError: true))
+    self.mainStackView.addArrangedSubview(CompositionFieldView(label: "Code Postal", isOnError: false))
+    self.mainStackView.addArrangedSubview(CompositionFieldView(label: "Nom", isOnError: true))
+    self.mainStackView.addArrangedSubview(CompositionFieldView(label: "Prenom", isOnError: true))
   }
 }

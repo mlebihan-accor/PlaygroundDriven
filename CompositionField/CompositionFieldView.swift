@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class CompositionField: UIView {
+public class CompositionFieldView: UIView {
 
   convenience init(label: String, isOnError: Bool) {
     self.init()
@@ -94,7 +94,7 @@ public class CompositionField: UIView {
 
       //  MARK: - icon
 
-      let bundle = Bundle(for: CompositionField.self)
+      let bundle = Bundle(for: CompositionFieldView.self)
       let icon = UIImage(named: "Warn", in: bundle, compatibleWith: nil)
       let iconImageView = UIImageView()
       iconImageView.translatesAutoresizingMaskIntoConstraints = false
