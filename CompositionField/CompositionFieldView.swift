@@ -10,7 +10,9 @@ import UIKit
 
 public class CompositionFieldView: UIView {
 
-  convenience init(label: String, isOnError: Bool) {
+  // MARK: - Lifecycle
+
+  convenience init(label: String, isOnError: Bool, titleAndInteractiveFieldStackViewAxis: NSLayoutConstraint.Axis) {
     self.init()
 
     // MARK: - Stack Container
@@ -35,8 +37,8 @@ public class CompositionFieldView: UIView {
 
     let titleAndInteractiveFieldStackView = UIStackView()
     titleAndInteractiveFieldStackView.translatesAutoresizingMaskIntoConstraints = false
-    // get UIapplication.shared.UIContentSizeCategory to set `titleAndInteractiveFieldStackView.axis`
-    titleAndInteractiveFieldStackView.axis = .horizontal
+    // get UIapplication.shared.UIContentSizeCategory to set `titleAndInteractiveFieldStackView.labelAndTextFieldAxis`
+    titleAndInteractiveFieldStackView.axis = titleAndInteractiveFieldStackViewAxis
     titleAndInteractiveFieldStackView.alignment = titleAndInteractiveFieldStackView.axis == .vertical ? .leading : .fill
     titleAndInteractiveFieldStackView.backgroundColor = .clear
     titleAndInteractiveFieldStackView.spacing = titleAndInteractiveFieldStackView.axis == .vertical ? 2 : 8

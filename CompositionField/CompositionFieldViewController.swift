@@ -10,6 +10,8 @@ import UIKit
 public class CompositionFieldViewController: UIViewController {
   
   @IBOutlet weak var mainStackView: UIStackView!
+
+  public var labelAndTextFieldAxis: NSLayoutConstraint.Axis = .horizontal
   
   public override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,8 +27,14 @@ public class CompositionFieldViewController: UIViewController {
       : .init(top: 16, left: 16, bottom: 16, right: 16)
     self.mainStackView.isLayoutMarginsRelativeArrangement = true
 
-    self.mainStackView.addArrangedSubview(CompositionFieldView(label: "Code Postal", isOnError: false))
-    self.mainStackView.addArrangedSubview(CompositionFieldView(label: "Nom", isOnError: true))
-    self.mainStackView.addArrangedSubview(CompositionFieldView(label: "Prenom", isOnError: true))
+    self.mainStackView.addArrangedSubview(CompositionFieldView(label: "Code Postal",
+                                                               isOnError: false,
+                                                               titleAndInteractiveFieldStackViewAxis: labelAndTextFieldAxis))
+    self.mainStackView.addArrangedSubview(CompositionFieldView(label: "Nom",
+                                                               isOnError: true,
+                                                               titleAndInteractiveFieldStackViewAxis: labelAndTextFieldAxis))
+    self.mainStackView.addArrangedSubview(CompositionFieldView(label: "Prenom",
+                                                               isOnError: true,
+                                                               titleAndInteractiveFieldStackViewAxis: labelAndTextFieldAxis))
   }
 }
