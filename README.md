@@ -1,4 +1,4 @@
-# PlaygroundDriven
+## PlaygroundDriven
 
 Quickly set up a view. Get instant feedback on its styling. Inspired by [KickStarter](https://github.com/kickstarter) development tools. 
 
@@ -6,9 +6,7 @@ First commit written with Xcode 12.4 and swift 5.3.2.
 
 
 
-
-
-# Why PlaygroundDriven?
+## Why PlaygroundDriven?
 
 If you need to iterate on views styles while working with UI/UX designers and POs, trying different rendering on the fly, if you need to make decisions and easily compare different options on styling, if you need to see how different data impact your UI and UX design, then this tool will prove useful.
 
@@ -18,9 +16,7 @@ PlaygroundDriven lets you get instant UI feedback and make informed decisions fa
 
 
 
-
-
-# How to use PlaygroundDriven?
+## How to use PlaygroundDriven?
 
 Download the project. Open it with Xcode.
 
@@ -28,11 +24,11 @@ Go to the `CompositionField` page and run the playground. You should see a view,
 
 
 
-### Play with CompositionField
+#### Play with CompositionField
 
 + Set the Playground to automatically run.
 
-+ Go to `MyPlayground/CompositionField`. It's where you can set up the rendering: 
++ Go to `MyPlayground/CompositionField`. It's where you can set up the rendering: 
 
 + Choose a device
 + Change orientation
@@ -46,7 +42,7 @@ Go to the `CompositionField` page and run the playground. You should see a view,
 
 
 
-### Use your own ViewControlller
+#### Use your own ViewControlller
 
 + Create a framework and embed your own View and/or ViewController, along with any files necessary to render your view.
 + Create your own playground page.
