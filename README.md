@@ -26,6 +26,8 @@ Go to the `CompositionField` page and run the playground. You should see a view,
 
 #### Play with CompositionField
 
+Use Xcode Playground to check dynamic type behavior over different size classes, preferred font sizes and screen sizes.
+
 + Set the Playground to automatically run.
 
 + Go to `MyPlayground/CompositionField`. It's where you can set up the rendering: 
