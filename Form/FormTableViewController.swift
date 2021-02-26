@@ -10,21 +10,28 @@ import UIKit
 public class FormTableViewController: UITableViewController {
 
   // MARK: - Properties
-  
+
   private let sections: [FormSection] = [FormSection(title: "Info", rows: [FormRow(value: "Name"),
                                                                            FormRow(value: "tel"),
                                                                            FormRow(value: "Street")]),
                                          FormSection(title: "Ronaël", rows: [FormRow(value: "Pierre"),
                                                                               FormRow(value: "Morgan"),
                                                                               FormRow(value: "Maxime")])]
-  
+
   // MARK: - Lifecycle
-  
+
   public override func viewDidLoad() {
     super.viewDidLoad()
 
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
-    tableView.backgroundColor = .darkGray
+    let nib = UINib(nibName: "FormTableViewCell", bundle: Bundle(for: FormTableViewCell.self))
+    tableView.register(nib, forCellReuseIdentifier: "reuseIdentifier")
+    tableView.backgroundColor = .clear
+    view.backgroundColor = .clear
+
+    tableView.layer.borderColor = UIColor.black.cgColor
+    tableView.layer.borderWidth = 1
+
+    self.tableView.tableFooterView = UIView()
   }
 
   // MARK: - Table view data source
@@ -35,15 +42,34 @@ public class FormTableViewController: UITableViewController {
   }
 
   public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete implementation, return the number of rows
-    return sections[section].rows.count
+    sections[section].rows.count
   }
 
   public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath) as! FormTableViewCell
 
     let formRow = sections[indexPath.section].rows[indexPath.row]
-    cell.textLabel?.text = formRow.value
+    cell.set(text: formRow.value)
+    cell.separatorInset = UIEdgeInsets(top: 0,
+                                       left: 16,
+                                       bottom: 0,
+                                       right: 16)
+
+    /* hide separator
+     self.tableView.separatorColor = self.tableView.backgroundColor
+     */
+
+
+
+    switch indexPath.row {
+    case 0:
+      cell.setBorder()
+      cell.setTopRadius(25.0)
+    case sections[indexPath.section].rows.count - 1:
+      cell.setBottomRadius(5.0)
+    default:
+      cell.removeRadius()
+    }
 
     return cell
   }

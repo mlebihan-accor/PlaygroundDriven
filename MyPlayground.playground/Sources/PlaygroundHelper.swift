@@ -124,8 +124,8 @@ public func playgroundHelper(child: UIViewController,
 
   parent.view.frame.size = parentSize
   parent.preferredContentSize = parentSize
-  parent.view.backgroundColor = .lightGray
-  child.view.backgroundColor = .white
+//  parent.view.backgroundColor = .lightGray
+//  child.view.backgroundColor = .white
 
   parent.view.translatesAutoresizingMaskIntoConstraints = false
   NSLayoutConstraint.activate([

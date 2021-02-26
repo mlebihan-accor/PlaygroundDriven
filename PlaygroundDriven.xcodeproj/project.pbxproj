@@ -20,6 +20,8 @@
 		1B21059525D8217F0059FB8B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21059225D8217F0059FB8B /* UIColor+Extension.swift */; };
 		1B21059625D8217F0059FB8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B21059325D8217F0059FB8B /* Main.storyboard */; };
 		1B21059A25D823950059FB8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B21059925D823950059FB8B /* Assets.xcassets */; };
+		1B746C8C25E92BF2002FBED2 /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B746C8A25E92BF2002FBED2 /* FormTableViewCell.swift */; };
+		1B746C8D25E92BF2002FBED2 /* FormTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B746C8B25E92BF2002FBED2 /* FormTableViewCell.xib */; };
 		1B7DFD1E25E90344000A0748 /* Form.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B7DFD1C25E90344000A0748 /* Form.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1B7DFD2125E90344000A0748 /* Form.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7DFD1A25E90344000A0748 /* Form.framework */; };
 		1B7DFD2225E90344000A0748 /* Form.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7DFD1A25E90344000A0748 /* Form.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -77,6 +79,8 @@
 		1B21059225D8217F0059FB8B /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		1B21059325D8217F0059FB8B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1B21059925D823950059FB8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B746C8A25E92BF2002FBED2 /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
+		1B746C8B25E92BF2002FBED2 /* FormTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormTableViewCell.xib; sourceTree = "<group>"; };
 		1B7DFD1A25E90344000A0748 /* Form.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Form.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7DFD1C25E90344000A0748 /* Form.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Form.h; sourceTree = "<group>"; };
 		1B7DFD1D25E90344000A0748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				1B7DFD1C25E90344000A0748 /* Form.h */,
 				1B7DFD1D25E90344000A0748 /* Info.plist */,
 				1B7DFD3225E90440000A0748 /* FormTableViewController.swift */,
+				1B746C8A25E92BF2002FBED2 /* FormTableViewCell.swift */,
+				1B746C8B25E92BF2002FBED2 /* FormTableViewCell.xib */,
 				1B7DFD3325E90440000A0748 /* FormTableViewController.xib */,
 			);
 			path = Form;
@@ -317,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B7DFD3525E90440000A0748 /* FormTableViewController.xib in Resources */,
+				1B746C8D25E92BF2002FBED2 /* FormTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B7DFD3425E90440000A0748 /* FormTableViewController.swift in Sources */,
+				1B746C8C25E92BF2002FBED2 /* FormTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

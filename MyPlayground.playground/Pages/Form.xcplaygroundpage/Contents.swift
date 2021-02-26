@@ -11,6 +11,6 @@ let container = playgroundHelper(child: vc,
                                  contentSizeCategory: .large)
 
 container.view.frame.size
-
+container.view.backgroundColor = .clear
 // render view
 PlaygroundPage.current.liveView = container
