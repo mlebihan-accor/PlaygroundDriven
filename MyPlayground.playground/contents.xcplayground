@@ -3,5 +3,6 @@
     <pages>
         <page name='CompositionField'/>
         <page name='TabBar'/>
+        <page name='Form'/>
     </pages>
 </playground>
